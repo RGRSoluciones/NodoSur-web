@@ -167,4 +167,80 @@ footer {
     .hero-content h1 { font-size: 2.5rem; }
     .hero-btns { flex-direction: column; }
     nav ul { display: none; } /* En una versión pro haríamos un menú hamburguesa */
+
+}
+
+/* --- Estilos para la Página de Servicios --- */
+
+.page-header {
+    padding: 120px 20px 40px; /* Espacio para que no lo tape el menú */
+    text-align: center;
+    background: radial-gradient(circle at top, #1b2735 0%, #0a0e17 100%);
+}
+
+.page-header h1 {
+    font-family: var(--font-title);
+    font-size: 3rem;
+    color: var(--primary);
+}
+
+.lista-servicios {
+    padding: 40px 10%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive */
+    gap: 40px;
+}
+
+.categoria-card {
+    background: var(--bg-card);
+    border: 1px solid rgba(255,255,255,0.05);
+    padding: 30px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.categoria-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-5px);
+}
+
+.cat-icon {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.categoria-card h2 {
+    font-family: var(--font-title);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 10px;
+}
+
+.categoria-card ul {
+    list-style: none;
+}
+
+.categoria-card li {
+    margin-bottom: 12px;
+    color: var(--text-sec);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.categoria-card li i {
+    color: var(--primary); /* El check verde/azul */
+    font-size: 0.9rem;
+}
+
+.cta-final {
+    text-align: center;
+    padding: 40px 20px 80px;
+}
+
+.cta-final p {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
 }
