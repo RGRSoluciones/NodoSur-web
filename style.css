@@ -244,3 +244,13 @@ footer {
     margin-bottom: 20px;
     font-size: 1.2rem;
 }
+
+.logo a {
+    text-decoration: none;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+}
+.logo a span {
+    color: var(--primary);
+}
