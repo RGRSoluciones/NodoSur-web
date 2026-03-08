@@ -1,0 +1,170 @@
+/* --- Variables de Color (Para cambiar fácil) --- */
+:root {
+    --bg-dark: #0a0e17;       /* Fondo muy oscuro */
+    --bg-card: #161b22;       /* Fondo de tarjetas */
+    --primary: #3b82f6;       /* Azul brillante (como tu logo) */
+    --accent: #fbbf24;        /* Amarillo Garantía */
+    --text-main: #f3f4f6;     /* Blanco suave */
+    --text-sec: #9ca3af;      /* Gris para textos secundarios */
+    --font-title: 'Outfit', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+/* --- Reseteo Básico --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: var(--font-body);
+    line-height: 1.6;
+}
+
+/* --- Navegación --- */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    position: fixed;
+    width: 100%;
+    background: rgba(10, 14, 23, 0.95); /* Efecto vidrio oscuro */
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.logo {
+    font-family: var(--font-title);
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.logo span { color: var(--primary); }
+
+nav ul { list-style: none; display: flex; gap: 20px; align-items: center; }
+nav a { text-decoration: none; color: var(--text-main); font-weight: 500; transition: 0.3s; }
+nav a:hover { color: var(--primary); }
+
+.btn-nav {
+    border: 1px solid var(--primary);
+    padding: 8px 20px;
+    border-radius: 5px;
+    color: var(--primary) !important;
+}
+
+.btn-nav:hover { background: var(--primary); color: white !important; }
+
+/* --- Hero Section --- */
+header {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    /* Degradado sutil de fondo */
+    background: radial-gradient(circle at center, #1b2735 0%, #090a0f 100%);
+}
+
+.hero-content h1 {
+    font-family: var(--font-title);
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, #fff, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-btns { margin-top: 30px; display: flex; gap: 15px; justify-content: center; }
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.2s;
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3); }
+.btn-secondary:hover { border-color: white; }
+
+/* --- Servicios --- */
+#servicios { padding: 80px 10%; text-align: center; }
+#servicios h2 { font-family: var(--font-title); font-size: 2.5rem; margin-bottom: 50px; }
+
+.grid-servicios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: var(--bg-card);
+    padding: 40px 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: 0.3s;
+}
+
+.card:hover { transform: translateY(-5px); border-color: var(--primary); }
+.card i { font-size: 2.5rem; color: var(--primary); margin-bottom: 20px; }
+.card h3 { font-family: var(--font-title); margin-bottom: 10px; }
+.card p { color: var(--text-sec); font-size: 0.95rem; }
+
+/* --- Garantía --- */
+.garantia { padding: 50px 10%; display: flex; justify-content: center; }
+.garantia-box {
+    background: rgba(251, 191, 36, 0.1); /* Amarillo transparente */
+    border: 1px solid var(--accent);
+    padding: 30px 50px;
+    border-radius: 10px;
+    text-align: center;
+    color: var(--accent);
+}
+.garantia-box i { font-size: 2rem; margin-bottom: 10px; }
+
+/* --- Footer --- */
+footer {
+    padding: 60px 20px;
+    text-align: center;
+    background: #05070a;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+.btn-whatsapp {
+    display: inline-block;
+    background: #25D366;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 20px 0;
+}
+.copyright { color: #555; font-size: 0.8rem; }
+
+/* --- Móvil --- */
+@media (max-width: 768px) {
+    .hero-content h1 { font-size: 2.5rem; }
+    .hero-btns { flex-direction: column; }
+    nav ul { display: none; } /* En una versión pro haríamos un menú hamburguesa */
+}
