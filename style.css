@@ -254,3 +254,43 @@ footer {
 .logo a span {
     color: var(--primary);
 }
+
+/* --- VERSIÓN MÓVIL (Celulares) --- */
+@media (max-width: 768px) {
+
+    /* 1. Hacé que los contenedores ocupen todo el ancho */
+    .container, .seccion, header {
+        width: 100% !important;
+        padding: 20px; /* Dale aire a los costados */
+    }
+
+    /* 2. Si usaste Flexbox para poner cosas al lado (Row), ponelas una abajo de la otra (Column) */
+    .nav-bar, .servicios-grid {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    /* 3. Achicá los textos gigantes */
+    h1 {
+        font-size: 32px; /* En PC seguro lo tenés en 60px o más */
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    /* 4. Acomodá los botones para que sean fáciles de tocar con el dedo */
+    .btn-whatsapp {
+        width: 100%; /* Botón ancho completo */
+        display: block;
+        margin-bottom: 15px;
+    }
+    
+    /* 5. Si tenés imágenes fijas, soltalas */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
